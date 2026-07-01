@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Les particularités sensorielles — Fiche visuelle</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+
+  :root{
+    --cream:#FFF8EC;
+    --ink:#2B2640;
+    --coral:#FF6B5E;
+    --turquoise:#1FADA4;
+    --sunflower:#F5A623;
+    --violet:#8067DC;
+    --leaf:#3FA772;
+    --sky:#3FA9D6;
+    --rose:#EC6B93;
+    --card-radius:22px;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    font-family:'Nunito', sans-serif;
+    color:var(--ink);
+    line-height:1.45;
+  }
+  .page{
+    max-width:1080px;
+    margin:0 auto;
+    padding:28px 28px 60px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    border-radius:28px;
+    padding:38px 34px 34px;
+    background:linear-gradient(120deg,var(--violet) 0%, var(--sky) 55%, var(--turquoise) 100%);
+    color:#fff;
+    overflow:hidden;
+    margin-bottom:26px;
+  }
+  .hero::before, .hero::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.14);
+  }
+  .hero::before{ width:220px; height:220px; top:-90px; right:-60px; }
+  .hero::after{ width:140px; height:140px; bottom:-70px; left:30%; }
+  .hero .eyebrow{
+    font-weight:800;
+    letter-spacing:.14em;
+    font-size:13px;
+    text-transform:uppercase;
+    background:rgba(255,255,255,0.22);
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:14px;
+  }
+  .hero h1{
+    font-family:'Fredoka', sans-serif;
+    font-size:44px;
+    margin:0 0 10px;
+    position:relative;
+    z-index:2;
+  }
+  .hero p{
+    font-size:17px;
+    max-width:620px;
+    margin:0;
+    position:relative;
+    z-index:2;
+    font-weight:600;
+    opacity:.96;
+  }
+  .hero .icons{
+    position:absolute;
+    right:28px;
+    bottom:16px;
+    font-size:34px;
+    letter-spacing:6px;
+    opacity:.9;
+  }
+
+  /* ---------- SECTION TITLES ---------- */
+  .section-title{
+    font-family:'Fredoka', sans-serif;
+    font-size:24px;
+    margin:36px 0 14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section-title .dot{
+    width:12px;height:12px;border-radius:50%;
+    background:var(--coral);
+    display:inline-block;
+  }
+
+  /* ---------- INTRO CHIPS ---------- */
+  .intro-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+  .chip-card{
+    background:#fff;
+    border-radius:var(--card-radius);
+    padding:16px 18px;
+    border:2px solid #F0E4D0;
+    font-weight:700;
+    font-size:14.5px;
+  }
+  .chip-card span.big{
+    display:block;
+    font-family:'Fredoka',sans-serif;
+    font-size:26px;
+    margin-bottom:4px;
+  }
+
+  /* ---------- SENSES GRID ---------- */
+  .senses-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+  }
+  .sense-card{
+    background:#fff;
+    border-radius:var(--card-radius);
+    padding:18px 20px 16px;
+    box-shadow:0 6px 0 rgba(0,0,0,0.05);
+    border:3px solid var(--accent);
+    break-inside:avoid;
+  }
+  .sense-head{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+  }
+  .sense-emoji{
+    font-size:26px;
+    width:42px;height:42px;
+    border-radius:50%;
+    background:var(--accent);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .sense-head h3{
+    font-family:'Fredoka',sans-serif;
+    margin:0;
+    font-size:19px;
+    color:var(--accent);
+  }
+  .sub-row{margin-bottom:6px;}
+  .sub-label{
+    font-weight:800;
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:.03em;
+    color:var(--accent);
+    margin-bottom:2px;
+    display:block;
+  }
+  .sub-text{
+    font-size:13.5px;
+    color:#4a4560;
+    margin:0 0 8px;
+  }
+
+  /* ---------- SURCHARGE (escalade) ---------- */
+  .escalade{
+    display:flex;
+    gap:12px;
+    align-items:stretch;
+  }
+  .esc-step{
+    flex:1;
+    border-radius:var(--card-radius);
+    padding:16px;
+    color:#fff;
+    font-weight:700;
+  }
+  .esc-step h4{
+    font-family:'Fredoka',sans-serif;
+    margin:0 0 6px;
+    font-size:16px;
+  }
+  .esc-step ul{margin:0;padding-left:18px;font-size:13px;font-weight:600;}
+  .esc-step ul li{margin-bottom:3px;}
+  .esc-1{background:var(--leaf);}
+  .esc-2{background:var(--sunflower);}
+  .esc-3{background:var(--coral);}
+  .esc-arrow{
+    align-self:center;
+    font-size:22px;
+    color:#c9c2b0;
+  }
+
+  /* ---------- STRATEGIES ---------- */
+  .strategy-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+  }
+  .strategy-card{
+    border-radius:var(--card-radius);
+    padding:18px 20px;
+    background:#fff;
+    border:3px dashed var(--accent);
+  }
+  .strategy-card h4{
+    font-family:'Fredoka',sans-serif;
+    margin:0 0 8px;
+    font-size:17px;
+    color:var(--accent);
+    display:flex;align-items:center;gap:8px;
+  }
+  .strategy-card ul{
+    margin:0;padding-left:18px;font-size:13.5px;color:#4a4560;
+  }
+  .strategy-card ul li{margin-bottom:5px;}
+
+  /* ---------- FOOTER ---------- */
+  .footer-note{
+    margin-top:32px;
+    background:#fff;
+    border-radius:var(--card-radius);
+    padding:18px 22px;
+    border:2px solid #F0E4D0;
+  }
+  .footer-note h4{
+    font-family:'Fredoka',sans-serif;
+    margin:0 0 8px;
+    font-size:15px;
+    color:var(--violet);
+  }
+  .footer-note p, .footer-note ul{
+    font-size:12px;
+    color:#6b6580;
+    margin:0 0 4px;
+    padding-left:16px;
+  }
+  .footer-note .italic{
+    font-style:italic;
+    margin-top:8px;
+    padding-left:0;
+  }
+
+  @media (max-width:720px){
+    .intro-row, .senses-grid, .strategy-grid{grid-template-columns:1fr;}
+    .escalade{flex-direction:column;}
+    .esc-arrow{transform:rotate(90deg);}
+    .hero h1{font-size:32px;}
+    .hero .icons{display:none;}
+  }
+
+  @media print{
+    body{background:#fff;}
+    .page{padding:0;max-width:100%;}
+    .sense-card, .strategy-card, .esc-step, .chip-card{box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="eyebrow">Fiche synthèse</span>
+    <h1>Les particularités sensorielles</h1>
+    <p>Comprendre, repérer et accompagner les différences de perception sensorielle — un fonctionnement neurologique différent, pas un choix.</p>
+    <div class="icons">👂 👁️ ✋ 🤸 💪 👃 ❤️</div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro-row">
+    <div class="chip-card"><span class="big">🧠</span>Critère diagnostique du TSA (DSM-5, B4), présent chez une large majorité des personnes autistes.</div>
+    <div class="chip-card"><span class="big">🎛️</span>Un même profil varie selon le contexte, la fatigue et la charge émotionnelle du moment.</div>
+    <div class="chip-card"><span class="big">💛</span>Les comportements de protection ou de recherche sont des réponses adaptatives, pas des « bizarreries ».</div>
+  </div>
+
+  <!-- SENSES -->
+  <div class="section-title"><span class="dot"></span>Les 7 sens, en un coup d'œil</div>
+  <div class="senses-grid">
+
+    <div class="sense-card" style="--accent:var(--coral)">
+      <div class="sense-head"><div class="sense-emoji">👂</div><h3>Auditif</h3></div>
+      <div class="sub-row"><span class="sub-label">😣 Hyperréactivité</span><p class="sub-text">Douleur aux bruits forts/soudains, port de casque, retrait des lieux bruyants.</p></div>
+      <div class="sub-row"><span class="sub-label">😐 Hyporéactivité</span><p class="sub-text">Ne réagit pas à son prénom, semble « ne pas entendre ».</p></div>
+      <div class="sub-row"><span class="sub-label">🔍 Recherche</span><p class="sub-text">Bruits répétitifs, musique forte, vocalisations.</p></div>
+    </div>
+
+    <div class="sense-card" style="--accent:var(--turquoise)">
+      <div class="sense-head"><div class="sense-emoji">👁️</div><h3>Visuel</h3></div>
+      <div class="sub-row"><span class="sub-label">😣 Hyperréactivité</span><p class="sub-text">Gêne à la lumière vive/néons, évitement du regard, fatigue visuelle.</p></div>
+      <div class="sub-row"><span class="sub-label">😐 Hyporéactivité</span><p class="sub-text">Ne remarque pas des éléments visibles pourtant évidents.</p></div>
+      <div class="sub-row"><span class="sub-label">🔍 Recherche</span><p class="sub-text">Fixation sur lumières, reflets, objets qui tournent.</p></div>
+    </div>
+
+    <div class="sense-card" style="--accent:var(--sunflower)">
+      <div class="sense-head"><div class="sense-emoji">✋</div><h3>Tactile</h3></div>
+      <div class="sub-row"><span class="sub-label">😣 Hyperréactivité</span><p class="sub-text">Évitement de matières, étiquettes, contacts imprévus ; sélectivité alimentaire.</p></div>
+      <div class="sub-row"><span class="sub-label">😐 Hyporéactivité</span><p class="sub-text">Ne remarque pas les petites blessures, le froid.</p></div>
+      <div class="sub-row"><span class="sub-label">🔍 Recherche</span><p class="sub-text">Pressions profondes, enveloppement, textures spécifiques.</p></div>
+    </div>
+
+    <div class="sense-card" style="--accent:var(--violet)">
+      <div class="sense-head"><div class="sense-emoji">🤸</div><h3>Vestibulaire</h3></div>
+      <div class="sub-row"><span class="sub-label">😣 Hyperréactivité</span><p class="sub-text">Malaise en voiture, balançoire, hauteur ; évitement des sols instables.</p></div>
+      <div class="sub-row"><span class="sub-label">😐 Hyporéactivité</span><p class="sub-text">Faible perception du déséquilibre, semble peu prudent.</p></div>
+      <div class="sub-row"><span class="sub-label">🔍 Recherche</span><p class="sub-text">Balancement, rotation, sauts répétés, vitesse.</p></div>
+    </div>
+
+    <div class="sense-card" style="--accent:var(--leaf)">
+      <div class="sense-head"><div class="sense-emoji">💪</div><h3>Proprioceptif</h3></div>
+      <div class="sub-row"><span class="sub-label">😣 Hyperréactivité</span><p class="sub-text">Inconfort dans les espaces exigus ou contacts rapprochés imposés.</p></div>
+      <div class="sub-row"><span class="sub-label">😐 Hyporéactivité</span><p class="sub-text">Gestes maladroits, objets cassés, force mal ajustée.</p></div>
+      <div class="sub-row"><span class="sub-label">🔍 Recherche</span><p class="sub-text">Sauter, pousser, porter des charges, se cogner contre les surfaces.</p></div>
+    </div>
+
+    <div class="sense-card" style="--accent:var(--sky)">
+      <div class="sense-head"><div class="sense-emoji">👃</div><h3>Gustatif / olfactif</h3></div>
+      <div class="sub-row"><span class="sub-label">😣 Hyperréactivité</span><p class="sub-text">Sélectivité alimentaire marquée, rejet de certaines odeurs.</p></div>
+      <div class="sub-row"><span class="sub-label">😐 Hyporéactivité</span><p class="sub-text">Faible perception des goûts/odeurs, ne remarque pas un aliment avarié.</p></div>
+      <div class="sub-row"><span class="sub-label">🔍 Recherche</span><p class="sub-text">Saveurs/textures fortes, sentir objets ou personnes.</p></div>
+    </div>
+
+    <div class="sense-card" style="--accent:var(--rose)">
+      <div class="sense-head"><div class="sense-emoji">❤️</div><h3>Intéroceptif</h3></div>
+      <div class="sub-row"><span class="sub-label">😣 Hyperréactivité</span><p class="sub-text">Perception amplifiée et envahissante des sensations internes (faim, douleur, cœur).</p></div>
+      <div class="sub-row"><span class="sub-label">😐 Hyporéactivité</span><p class="sub-text">Difficulté à identifier la faim, la fatigue, la montée d'anxiété.</p></div>
+      <div class="sub-row"><span class="sub-label">🔍 Recherche</span><p class="sub-text">— (peu documenté pour ce sens)</p></div>
+    </div>
+
+  </div>
+
+  <!-- SURCHARGE -->
+  <div class="section-title"><span class="dot" style="background:var(--sunflower)"></span>Repérer la surcharge sensorielle</div>
+  <div class="escalade">
+    <div class="esc-step esc-1">
+      <h4>🟢 Zone de confort</h4>
+      <ul><li>Régulé, disponible</li><li>Utilise ses stratégies spontanées</li></ul>
+    </div>
+    <div class="esc-arrow">➜</div>
+    <div class="esc-step esc-2">
+      <h4>🟡 Signes précoces</h4>
+      <ul><li>Tension, irritabilité</li><li>Difficulté à se concentrer</li><li>Besoin de bouger / s'isoler</li></ul>
+    </div>
+    <div class="esc-arrow">➜</div>
+    <div class="esc-step esc-3">
+      <h4>🔴 Surcharge</h4>
+      <ul><li>Sidération, « shutdown »</li><li>Agitation intense, pleurs</li><li>Temps de récupération nécessaire</li></ul>
+    </div>
+  </div>
+
+  <!-- STRATEGIES -->
+  <div class="section-title"><span class="dot" style="background:var(--violet)"></span>Grands principes d'accompagnement</div>
+  <div class="strategy-grid">
+    <div class="strategy-card" style="--accent:var(--turquoise)">
+      <h4>🏠 Aménager l'environnement</h4>
+      <ul>
+        <li>Réduire les sources de surcharge (lumière, bruit, densité) quand possible.</li>
+        <li>Proposer des alternatives : casque, lunettes filtrantes, espace de retrait.</li>
+        <li>Anticiper les changements sensoriels prévisibles.</li>
+      </ul>
+    </div>
+    <div class="strategy-card" style="--accent:var(--sunflower)">
+      <h4>🧩 Construire une diète sensorielle</h4>
+      <ul>
+        <li>Identifier les activités qui apaisent ou régulent, avant la crise.</li>
+        <li>Les intégrer de façon anticipée dans le quotidien.</li>
+        <li>S'appuyer sur des ancrages externes (minuteries, rappels visuels).</li>
+      </ul>
+    </div>
+    <div class="strategy-card" style="--accent:var(--coral)">
+      <h4>🌟 Valoriser les stratégies spontanées</h4>
+      <ul>
+        <li>Casque, retrait, enveloppement, tapotements, nature…</li>
+        <li>Les nommer et les valoriser plutôt que les corriger.</li>
+        <li>Elles témoignent d'une vraie capacité d'autorégulation.</li>
+      </ul>
+    </div>
+    <div class="strategy-card" style="--accent:var(--rose)">
+      <h4>💬 Sensibiliser l'entourage</h4>
+      <ul>
+        <li>Expliquer que ces comportements sont adaptatifs, pas des fermetures.</li>
+        <li>Favoriser une communication explicite des besoins sensoriels.</li>
+        <li>Ne pas faire porter à la personne la charge de se justifier.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-note">
+    <h4>📚 Références aux Recommandations de Bonnes Pratiques</h4>
+    <ul>
+      <li>HAS/ANESM (2012) — Interventions éducatives et thérapeutiques coordonnées chez l'enfant et l'adolescent avec TSA</li>
+      <li>HAS (2018) — TSA : signes d'alerte, repérage, diagnostic et évaluation</li>
+      <li>Stratégie nationale pour l'autisme au sein des TND (2018–2022)</li>
+      <li>A. J. Ayres — Sensory Integration Theory · P. Wilbarger — Sensory Diet · W. Dunn — Sensory Profile</li>
+    </ul>
+    <p class="italic">Support de synthèse à usage professionnel, à adapter à chaque situation individuelle. Ne se substitue pas à une évaluation sensorielle individualisée.</p>
+  </div>
+
+</div>
+</body>
+</html>
